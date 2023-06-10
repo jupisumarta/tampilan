@@ -21,10 +21,6 @@
 <body>
 <div class="page-wrapper">
  	
-    <!-- Preloader -->
-    <div class="preloader"><div class="loader"><div class="cssload-container"><div class="cssload-speeding-wheel"></div></div></div></div>
- 	
-
     <!-- Main Header-->
     <header class="main-header header-style-two">
         <!-- Header Top -->
@@ -451,9 +447,9 @@
     </header>
     <!--End Main Header -->
     
-    <section class="page-title" style="background-color: #eeeeee;">
+    <section class="page-title" style="background-image:url(images/background/bmkg.png);">
         <div class="auto-container">
-            <h1 style="color: #555555;">PERINGATAN</h1>
+            <h1 style="color: #ffffff;">PERINGATAN</h1>
         </div>
         
         <!--page-info-->
@@ -488,32 +484,43 @@
                                 <div class="column content-column col-lg-11 col-md-12 col-sm-12">
                                     <!--Tabs Box-->
                                     <div class="tabs-box tabs-style-one">
-                                        <h3><strong>Potensi Pertumbuhan Awan Hujan</strong></h3>
+                                        <h3 class="text-center" style="padding: 3%; letter-spacing: .2em;">PRAKIRAAN CUACA BERBASIS DAMPAK</h3><br>
                                         <!--Tab Buttons-->
                                         <ul class="tab-buttons clearfix">
-                                            <li data-toogle="#tab-one" class="tab-btn active-btn">Hari Ini</li>
-                                            <li data-toogle="#tab-two" class="tab-btn">Esok</li>
-                                            <li data-toogle="#tab-three" class="tab-btn">Lusa</li>
+                                            <li data-tab="#tab-one" class="tab-btn active-btn">Hari Ini</li>
+                                            <li data-tab="#tab-two" class="tab-btn">Besok</li>
+                                            <li data-tab="#tab-three" class="tab-btn">Lusa</li>
                                         </ul>
-
-                                        <!--Tab / Active Tab-->
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="tab-one">
-                                                <img src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/ecmwf/awan_d0.png">
+                                            
+                                        <!--Tabs Content-->
+                                        <div class="tabs-content">
+                                            <!--Tab / Active Tab-->
+                                            <div class="tab active-tab" id="tab-one">
+                                                <div class="image-box">
+                                                    <img src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/ecmwf/awan_d0.png" alt="" />
+                                                </div>
                                             </div>
-                                            <div class="tab-pane" id="tab-two">
-                                                <img src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/ecmwf/awan_d1.png">
+                                            
+                                            <!--Tab-->
+                                            <div class="tab" id="tab-two">
+                                                <div class="image-box">
+                                                    <img src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/ecmwf/awan_d1.png" alt="" />
+                                                </div>
                                             </div>
-                                            <div class="tab-pane" id="tab-three">
-                                                <img src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/ecmwf/awan_d2.png">
+                                            
+                                            <!--Tab-->
+                                            <div class="tab" id="tab-three">
+                                                <div class="image-box">
+                                                    <img src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/ecmwf/awan_d2.png" alt="" />
+                                                </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+
 				</div>
                 <!--Content Side-->
 

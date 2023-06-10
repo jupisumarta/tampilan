@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SIJAMET</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/revolution-slider.css" rel="stylesheet">
+<link href="css/style.css " rel="stylesheet">
+<!--Favicon-->
+<link rel="shortcut icon" href="images/logo-bmkg.png" type="image/x-icon">
+<link rel="icon" href="images/logo-bmkg.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="Description" content="Enter your description here" />
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="https://static.zohocdn.com/forms/css/formsthirdparty.2755260429cd02c98112dac6f4b5b8ce.css">
+<link href="https://static.zohocdn.com/forms/css/themes/media/classroomMedia.2582f611bdb95a24983b2077b8569bee.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!-- flat picker -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/confetti.css">
+<link
+href="https://static.zohocdn.com/forms/css/themes/classroom.8d5885c76c7b79c2d197f207e54714c5.css"
+rel="stylesheet"
+type="text/css"
+/>
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</head>
+<style>
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    #myImg:hover {opacity: 0.7;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {  
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    
+    @keyframes zoom {
+      from {transform: scale(0.1)} 
+      to {transform: scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 80px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+    /* mengatur ukuran canvas tanda tangan  */
+    canvas {
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 400px;
+    }
+
+
+    .date-input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-image: url('calendar-icon.png');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 20px;
+      padding-right: 30px;
+    }
+
+   
+
+</style>
+<body>
+<div class="page-wrapper">
+    
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+        <!-- Header Top -->
+    	<div class="header-top">
+        	<div class="auto-container clearfix">
+				<!--Top Left-->
+				<div class="top-left pull-left">
+					<ul class="links-nav clearfix">
+						<li><a href="" class="fa fa-twitter" style="color: white;"></a></li>
+						<li><a href="" class="fa fa-facebook" style="color: white;"></a></li>
+						<li><a href="" class="fa fa-youtube" style="color: white;"></a></li>
+						<li><a href="" class="fa fa-instagram" style="color: white;"></a></li>
+						<li><a href="" class="fa fa-whatsapp" style="color: white;"></a></li>
+					</ul>
+				</div>
+				
+				<!--Top Right-->
+				<div class="top-right pull-right">
+                    <!-- Search Form -->
+                    <!-- <div class="search-box">
+                        <form method="post" action="index.html">
+                            <div class="form-group">
+                                <input type="search" name="search-field" value="" placeholder="Search your Keyword">
+                                <button type="submit"><span class="icon fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div> -->
+				</div>
+			</div>
+        </div>
+        <!-- Header Top End -->
+        
+        <!--Header-Upper-->
+        <div class="header-upper">
+        	<div class="auto-container">
+            	<div class="clearfix">
+                	
+                	<div class="pull-left logo-outer">
+                    	<div class="logo"><a href="home.html"><img src="images/logo bmkg.png", height="60px" alt="BADAN METEOROLOGI" title="KLIMATOLOGI, DAN GEOFISIKA "></a></div>
+                    </div>
+                    
+                    <div class="pull-right upper-right clearfix">
+                    	
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->    	
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                <li class="current dropdown"><a href="#">Beranda</a>
+                                    <ul>
+                                        <li><a href="profil-kantor.html">Profil Kantor</a></li>
+                                        <li><a href="sejarah-kantor.html">Sejarah Kantor</a></li>
+                                        <li><a href="#">Pegawai</a></li>
+                                        <li><a href="#">Penghargaan</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Prakiraan</a>
+                                    <ul>
+                                        <li class="dropdown">
+                                            <a>Cuaca</a>
+                                            <ul>
+                                                <li><a href="#">Peringatan Dini Cuaca</a></li>
+                                                <li><a href="prakiraan-cuaca-berbasis-dampak.html">Prakiraan Cuaca Berbasis Dampak</a></li>
+                                                <li><a href="prakiraan-harian-ketapang.html">Prakiraan Harian Ketapang</a></li>
+                                                <li><a href="prakiraan-harian-kayong-utara.html">Prakiraan Harian Kayong Utara</a></li>
+                                                <li><a href="#">Prakiraan Mingguan Ketapang</a></li>
+                                                <li><a href="#">Prakiraan Angin 3000 Feet</a></li>
+                                                <li><a href="potensi-hujan-indonesia.html">Potensi Hujan Indonesia</a></li>
+                                                <li><a href="potensi-pertumbuhan-awan-hujan.html">Potensi Pertumbuhan Awan Hujan</a></li>
+                                                <li><a href="potensi-kemudahan-karhutla.html">Potensi Kemudahan Karhutla</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a>Iklim</a>
+                                            <ul>
+                                                <li><a href="prakiraan-curah-hujan-dasarian.html">Prakiraan Curah Hujan Dasarian</a></li>
+                                                <li><a href="prakiraan-curah-hujan-bulanan.html">Prakiraan Curah Hujan Bulanan</a></li>
+                                                <li><a href="prakiraan-sifat-hujan.html">Prakiraan Sifat Hujan</a></li>
+                                                <li><a href="prakiraan-musim.html">Prakiraan Musim</a></li>
+                                                <li><a href="potensi-banjir-dasarian.html">Potensi Banjir Dasarian</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a>Maritim</a>
+                                            <ul>
+                                                <li><a href="peringatan-dini-gelombang.html">Peringatan Dini Gelombang Tinggi</a></li>
+                                                <li><a href="prakiraan-tinggi-gelombang.html">Prakiraan Tinggi Gelombang</a></li>
+                                                <li><a href="prakiraan-cepat-angin-laut.html">Prakiraan Kecepatan Angin di Laut</a></li>
+                                                <li><a href="prakiraan-cuaca-pelabuhan-laut.html">Prakiraan Cuaca Pelabuhan Laut</a></li>
+                                                <li><a href="pasang-surut-kendawangan.html">Pasang Surut Kendawangan</a></li>
+                                                <li><a href="#">Peta Interaktif Prakiraan Maritim</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Pengamatan</a>
+                                    <ul>
+                                    	<li class="dropdown">
+                                            <a href="#">Citra Satelit</a>
+                                            <ul>
+                                                <li><a href="kalimantan-barat.html">Kalimantan Barat</a></li>
+                                                <li><a href="cloud-type-wilayah-indonesia.html">Cloud Type Wilayah Indonesia</a></li>
+                                                <li><a href="sebaran-asap.html">Sebaran Asap</a></li>
+                                                <li><a href="curah-hujan-akumulasi.html">Curah Hujan Akumulasi</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Citra Radar Cuaca</a>
+                                            <ul>
+                                                <li><a href="indonesia.html">Indonesia</a></li>
+                                                <li><a href="sintang.html">Sintang</a></li>
+                                                <li><a href="pontianak.html">Pontianak</a></li>
+                                                <li><a href="pangkalanbun.html">Pangkalanbun</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="titik-panas-kalimantan-barat.html">Titik Panas Kalimantan Barat</a></li>
+                                    	<li class="dropdown">
+                                            <a href="#">Ikhtisar Cuaca</a>
+                                            <ul>
+                                                <li><a href="#">Ikhtisar Cuaca harian</a></li>
+                                                <li><a href="#">Rangkuman Cuaca</a></li>
+                                                <li><a href="#">Info Cuaca Ekstrim Bulanan</a></li>
+                                                <li><a href="#">Grafik Profil Suhu Udara bulanan</a></li>
+                                                <li><a href="#">Grafik Profil Kelembapan Udara Bulanan</a></li>
+                                                <li><a href="#">Kalender Cuaca</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Angin</a>
+                                            <ul>
+                                                <li><a href="#">Lapisan 925 mb</a></li>
+                                                <li><a href="#">Diagram Windrose Bulanan</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Curah Hujan</a>
+                                            <ul>
+                                                <li><a href="#">Stamet Ketapang 30 Tahun</a></li>
+                                                <li><a href="analisis-curah-hujan-bulanan.html">Analisis Curah Hujan Bulanan</a></li>
+                                                <li><a href="#">Peta Normal Curah Hujan 30 Tahun</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Penerbangan </a>
+                                    <ul>
+                                    	<li class="dropdown">
+                                            <a href="#">Peringatan Dini Cuaca Penerbangan</a>
+                                            <ul>
+                                                <li><a href="#">Sigmet</a></li>
+                                                <li><a href="#">Abu Vulkanik</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Pengamatan Cuaca Penerbangan</a>
+                                            <ul>
+                                                <li><a href="#">Cuaca Terkini Bandara</a></li>
+                                                <li><a href="#">METAR / SPECI</a></li>
+                                                <li><a href="#">Cuaca Bandara Indonesia</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Prakiraan Cuaca Penerbangan</a>
+                                            <ul>
+                                                <li><a href="#">Prediksi Awan CB</a></li>
+                                                <li><a href="#">TAF</a></li>
+                                                <li><a href="#">Chart Wind/Temp</a></li>
+                                                <li><a href="#">Chart Medium SIGWX</a></li>
+                                                <li><a href="#">Chart High SIGWX</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Flight Document</a></li>
+                                        <li><a href="#">Aerodrome Climatolgy Summary</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Berita Artikel</a>
+                                    <ul>
+                                    	<li><a href="#">Berita</a></li>
+                                        <li><a href="#">Artikel</a></li>
+                                        <li><a href="#">Buletin</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Layanan Publik</a>
+                                    <ul>
+                                    	<li><a href="#">Prosedur Layanan</a></li>
+                                        <li><a href="#">Informasi Layanan</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Pelayanan Data Informasi</a>
+                                        <ul>
+                                            <li><a href="#">Pelayanan untuk Instansi/Perusahaan</a></li>
+                                            <li><a href="#">Pelayanan untuk Pleajar</a></li>
+                                        </ul>
+                                    </li>
+                                        <li><a href="#">Prosedur Pembayaran Jasa Layanan</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">Pelayanan</a>
+                                            <ul>
+                                                <li><a href="#">Contoh Surat Pengantar</a></li>
+                                                <li><a href="#">Regulasi</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Galeri</a>
+                                    <ul>
+                                    	<li><a href="#">Foto</a></li>
+                                        <li><a href="#">Video</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="kontak.html">Kontak</a></li>
+                                </div>
+                            </nav><!-- Main Menu End-->
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container clearfix">
+            	<!--Logo-->
+            	<div class="logo pull-left">
+                	<a href="home.html" class="img-responsive"><img src="images/logo bmkg.png", height="53px" alt="Brighton" title="Brighton"></a>
+                </div>
+                
+                <!--Right Col-->
+                <div class="right-col pull-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->    	
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                        <li class="current dropdown"><a href="#">Beranda</a>
+                            <ul>
+                                <li><a href="profil-kantor.html">Profil Kantor</a></li>
+                                <li><a href="sejarah-kantor.html">Sejarah Kantor</a></li>
+                                <li><a href="#">Pegawai</a></li>
+                                <li><a href="#">Penghargaan</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Prakiraan</a>
+                            <ul>
+                                <li class="dropdown">
+                                    <a>Cuaca</a>
+                                    <ul>
+                                        <li><a href="#">Peringatan Dini Cuaca</a></li>
+                                        <li><a href="prakiraan-cuaca-berbasis-dampak.html">Prakiraan Cuaca Berbasis Dampak</a></li>
+                                        <li><a href="prakiraan-harian-ketapang.html">Prakiraan Harian Ketapang</a></li>
+                                        <li><a href="prakiraan-harian-kayong-utara.html">Prakiraan Harian Kayong Utara</a></li>
+                                        <li><a href="#">Prakiraan Mingguan Ketapang</a></li>
+                                        <li><a href="#">Prakiraan Angin 3000 Feet</a></li>
+                                        <li><a href="potensi-hujan-indonesia.html">Potensi Hujan Indonesia</a></li>
+                                        <li><a href="potensi-pertumbuhan-awan-hujan.html">Potensi Pertumbuhan Awan Hujan</a></li>
+                                        <li><a href="potensi-kemudahan-karhutla.html">Potensi Kemudahan Karhutla</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a>Iklim</a>
+                                    <ul>
+                                        <li><a href="prakiraan-curah-hujan-dasarian.html">Prakiraan Curah Hujan Dasarian</a></li>
+                                        <li><a href="prakiraan-curah-hujan-bulanan.html">Prakiraan Curah Hujan Bulanan</a></li>
+                                        <li><a href="prakiraan-sifat-hujan.html">Prakiraan Sifat Hujan</a></li>
+                                        <li><a href="prakiraan-musim.html">Prakiraan Musim</a></li>
+                                        <li><a href="potensi-banjir-dasarian.html">Potensi Banjir Dasarian</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a>Maritim</a>
+                                    <ul>
+                                        <li><a href="peringatan-dini-gelombang.html">Peringatan Dini Gelombang Tinggi</a></li>
+                                        <li><a href="prakiraan-tinggi-gelombang.html">Prakiraan Tinggi Gelombang</a></li>
+                                        <li><a href="prakiraan-cepat-angin-laut.html">Prakiraan Kecepatan Angin di Laut</a></li>
+                                        <li><a href="prakiraan-cuaca-pelabuhan-laut.html">Prakiraan Cuaca Pelabuhan Laut</a></li>
+                                        <li><a href="pasang-surut-kendawangan.html">Pasang Surut Kendawangan</a></li>
+                                        <li><a href="#">Peta Interaktif Prakiraan Maritim</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Pengamatan</a>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#">Citra Satelit</a>
+                                    <ul>
+                                        <li><a href="kalimantan-barat.html">Kalimantan Barat</a></li>
+                                        <li><a href="cloud-type-wilayah-indonesia.html">Cloud Type Wilayah Indonesia</a></li>
+                                        <li><a href="sebaran-asap.html">Sebaran Asap</a></li>
+                                        <li><a href="curah-hujan-akumulasi.html">Curah Hujan Akumulasi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Citra Radar Cuaca</a>
+                                    <ul>
+                                        <li><a href="indonesia.html">Indonesia</a></li>
+                                        <li><a href="sintang.html">Sintang</a></li>
+                                        <li><a href="pontianak.html">Pontianak</a></li>
+                                        <li><a href="pangkalanbun.html">Pangkalanbun</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="titik-panas-kalimantan-barat.html">Titik Panas Kalimantan Barat</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Ikhtisar Cuaca</a>
+                                    <ul>
+                                        <li><a href="#">Ikhtisar Cuaca harian</a></li>
+                                        <li><a href="#">Rangkuman Cuaca</a></li>
+                                        <li><a href="#">Info Cuaca Ekstrim Bulanan</a></li>
+                                        <li><a href="#">Grafik Profil Suhu Udara bulanan</a></li>
+                                        <li><a href="#">Grafik Profil Kelembapan Udara Bulanan</a></li>
+                                        <li><a href="#">Kalender Cuaca</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Angin</a>
+                                    <ul>
+                                        <li><a href="#">Lapisan 925 mb</a></li>
+                                        <li><a href="#">Diagram Windrose Bulanan</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Curah Hujan</a>
+                                    <ul>
+                                        <li><a href="#">Stamet Ketapang 30 Tahun</a></li>
+                                        <li><a href="analisis-curah-hujan-bulanan.html">Analisis Curah Hujan Bulanan</a></li>
+                                        <li><a href="#">Peta Normal Curah Hujan 30 Tahun</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Penerbangan </a>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#">Peringatan Dini Cuaca Penerbangan</a>
+                                    <ul>
+                                        <li><a href="#">Sigmet</a></li>
+                                        <li><a href="#">Abu Vulkanik</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Pengamatan Cuaca Penerbangan</a>
+                                    <ul>
+                                        <li><a href="#">Cuaca Terkini Bandara</a></li>
+                                        <li><a href="#">METAR / SPECI</a></li>
+                                        <li><a href="#">Cuaca Bandara Indonesia</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Prakiraan Cuaca Penerbangan</a>
+                                    <ul>
+                                        <li><a href="#">Prediksi Awan CB</a></li>
+                                        <li><a href="#">TAF</a></li>
+                                        <li><a href="#">Chart Wind/Temp</a></li>
+                                        <li><a href="#">Chart Medium SIGWX</a></li>
+                                        <li><a href="#">Chart High SIGWX</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Flight Document</a></li>
+                                <li><a href="#">Aerodrome Climatolgy Summary</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Berita Artikel</a>
+                            <ul>
+                                <li><a href="#">Berita</a></li>
+                                <li><a href="#">Artikel</a></li>
+                                <li><a href="#">Buletin</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Layanan Publik</a>
+                            <ul>
+                                <li><a href="#">Prosedur Layanan</a></li>
+                                <li><a href="#">Informasi Layanan</a></li>
+                            <li class="dropdown">
+                                <a href="#">Pelayanan Data Informasi</a>
+                                <ul>
+                                    <li><a href="#">Pelayanan untuk Instansi/Perusahaan</a></li>
+                                    <li><a href="#">Pelayanan untuk Pleajar</a></li>
+                                </ul>
+                            </li>
+                                <li><a href="#">Prosedur Pembayaran Jasa Layanan</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Pelayanan</a>
+                                    <ul>
+                                        <li><a href="#">Contoh Surat Pengantar</a></li>
+                                        <li><a href="#">Regulasi</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Galeri</a>
+                            <ul>
+                                <li><a href="#">Foto</a></li>
+                                <li><a href="#">Video</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+                
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    
+    </header>
+    <!--End Main Header -->
+    
+    <section class="page-title" style="background-image:url(images/background/bg.jpg);">
+        <div class="auto-container">
+            <h1 style="color: #ffffff;">Layanan Publik</h1>
+        </div>
+        
+        <!--page-info-->
+        <div class="page-info">
+        	<div class="auto-container">
+            	<div class="row clearfix">
+            
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="bread-crumb clearfix">
+                            <li><a href="index.html">Layanan Publik</a></li>
+                            <li class="active">Informasi Layanan</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!--Checkout Page-->
+    <div class="checkout-page">
+        <div class="auto-container">
+            
+            <div class="sec-title-four">
+                <h1>FORMULIR KHUSUS PERMINTAAN JASA INFORMASI CUACA DAN IKLIM STASIUN METEOROLOGI KLS III RAHADI OESMAN KETAPANG</h1>
+                <span>Jika bapak/ibu mengalami kesulitan dalam pengisian formulir permintaan ini maka silahkan menghubungi pihak BMKG Ketapang di call centre (0811 5787 121)</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <h3>
+                        <strong>
+                            ALUR PELAYANAN JASA <br> INFORMASI CUACA IKLIM
+                        </strong>
+                    </h3>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <img id="myImg" src="images/resource/form.jpg" alt="Informasi pengisian data" width="300" height="400">
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p><strong>Regulasi-regulasi Permintaan Jasa Informasi Cuaca dan Iklim:</strong></p>
+            <span>1. Standar Operasional Pelayanan Data Stasiun Meteorologi Kls III Rahadi Oesman Ketapang<br><a href="https://bit.ly/SOP_PelayananData">https://bit.ly/SOP_PelayananData</a><br>
+                2. Perka BMKG No 8 tahun 2013 tentang syarat dan ketentuan  pengenaan data tarif nol rupiah<br><a href="https://bit.ly/PerkaBMKGNo8_2013">https://bit.ly/PerkaBMKGNo8_2013</a></span>
+            
+            <p><strong><br> Syarat Permintaan Data Khusus Untuk Penelitian Non Komersial (Mahasiswa/Pelajar atau lain-lain) :</strong></p>
+            <span>1. Surat Pengantar dari Instansi/Lembaga Pendidikan <br> 
+                <ol  style="margin-left: 3rem;" >
+                    <li  style="list-style-type:lower-alpha !important ;">Format Untuk Mahasiswa/Pelajar </li><a href=" https://bit.ly/Contoh_SuratPengantarKhusus"> https://bit.ly/Contoh_SuratPengantarKhusus</a><br>
+                    <li  style="list-style-type:lower-alpha !important ;">Format Untuk Instansi/lain-lain </li><a href="https://bit.ly/Contoh_SuratPengantarKhususLain">https://bit.ly/Contoh_SuratPengantarKhususLain</a><br>
+                </ol>
+            
+               </span>
+            <span>2. Surat Pernyataan Bermaterai <br> 
+                <ol  style="margin-left: 3rem;" >
+                    <li  style="list-style-type:lower-alpha !important ;">Format  </li><a href="https://bit.ly/Contoh_SuratPernyataanBMKGKetapang"> https://bit.ly/Contoh_SuratPernyataanBMKGKetapang</a><br>
+                    
+                </ol>
+            
+               </span>
+            <span>3. Proposal Penelitian Yang Telah Ditanda Tangani Pembimbing/Dosen </span>
+            <span> 4. Salinan Foto Identitas Diri( KTP/SIM/KTM). </span>
+               
+              
+            
+              
+         
+          
+              
+            
+              
+         
+            <p><strong><br> Ketentuan :</strong></p>
+            <span>1. Semua berkas syarat permintaan data tersebut wajib diupload sesuai dengan ketentuan yang ada dan bersedia menyerahkan berkas di atas dalam bentuk fisik (hardcopy) kepada petugas pelayanan saat ke kantor Stasiun Meteorologi Kelas III Rahadi Oesman Ketapang <br> 2. Silahkan melengkapi form berikut ini dengan memperhatikan saksama setiap keterangannya. <br> 3. Proses pengolahan data yang diajukan akan diolah dan disiapkan setelah semua syarat administrasi terpenuhi dengan durasi pengolahan data maksimal 5 hari kerja. <br>​</span>
+            <!--Billing Details-->
+            <div class="billing-details">
+                <div class="shop-form">
+                    <form method="post" action="checkout.html">
+                        <div class="row clearfix">
+                            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                
+                                
+                                <div class="row clearfix">
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Nama <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input type="text" name="field-name" value="" placeholder="Pertama" required>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12" style="padding-top: 34px;">
+                                        <input type="text" name="field-name" value="" placeholder="Terakhir" required>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <label for="formFile" class="form-label">Institusi/Lembaga/Perusahaan <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input type="text" name="field-name" value="" placeholder="" required>
+                                        <span style="font-style: italic;">Silahkan diisi dengan nama institusi/lembaga/perusahaan</span>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Alamat <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input type="email" name="field-name" value="" placeholder="" required>
+                                        <span style="font-style: italic;">Silahkan diisi alamat institusi/lembaga/perusahaan</span>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">No Telp / Hp <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input type="text" name="field-name" value="" placeholder="" required>
+                                        <span style="font-style: italic;">Silahkan diisi dengan nomor telp/hp yang bisa dihubungi untuk berkordinasi</span>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <label for="formFile" class="form-label">Email / No Fax</label>
+                                        <input type="text" name="field-name" value="" placeholder="">
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12 payment-options">
+                                        <label for="formFile" class="form-label">Jenis Permintaan Jasa Informasi Cuaca dan Iklim <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <ul>
+                                            <li>
+                                                <div class="radio-option">
+                                                    <input type="radio" name="payment-group" id="payment-1">
+                                                    <label for="payment-1"><span>Analisa Cuaca Khusus Untuk Keperluan Klaim Asuransi</span></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radio-option">
+                                                    <input type="radio" name="payment-group" id="payment-2">
+                                                    <label for="payment-2"><span>Analisa Cuaca Umum</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radio-option">
+                                                    <input type="radio" name="payment-group" id="payment-3">
+                                                    <label for="payment-3"><span>Data Parameter Cuaca ( Curah Hujan/Suhu/Kelembaban/Penyinaran dan lain-lain)</span></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radio-option">
+                                                    <input type="radio" name="payment-group" id="payment-4">
+                                                    <label for="payment-4"><span>Prakiraan atau Prospek Cuaca</span></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radio-option">
+                                                    <input type="radio" name="payment-group" id="payment-5">
+                                                    <label for="payment-5"><span>Lain-lain</span></label>
+                                                </div>
+                                            </li>
+                                            <span style="font-style: italic;">Silahkan dichecklist jenis permintaan data sesuai dengan yang dimohonkan ( Jika satu jenis data yang dipilih maka cukup satu saja dan jika dua maka dichecklist dua )</span>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <label for="formFile" class="form-label">Periode Data </label>
+                                        <input type="text" name="field-name" value="" placeholder="">
+                                        <span style="font-style: italic;">Silahkan diisi dengan periode data / tanggal informasi cuaca atau iklim yang dimohonkan ( Contoh: Periode 2016 -2020 / tanggal 1 April 2021 )</span>
+                                    </div>
+                                   
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Lokasi Data </label>
+                                        <input type="text" name="code" value="" placeholder="Jalan">
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <input type="text" name="code" value="" placeholder="RT/RW">
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="code" value="" placeholder="Kelurahan">
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="code" value="" placeholder="Kecamatan">
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="code" value="" placeholder="Kabupaten">
+                                       
+                                    </div>
+                                    <div class="form-group col-md-12 ">
+                                        <span style="font-style: italic;">Silahkan diisi dengan lokasi titik data yang akan digunakan dengan lengkap..</span>
+                                    </div>
+
+
+                                    <!--tanggal  pengambilan daata -->
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Tanggal Pengmbilan Data</label>
+                                         <em class="important" style="color: #ff0000 ;">*</em></label>
+                                       
+                                              <div  >
+                                                <input type="date"  id="tanggal" name="code" value="" placeholder=""  >  
+                                               
+                                           
+                                              </div>                                                           
+                                        <span>dd-MMM-yyyy</span>
+                                    </div>
+                              
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Surat Pengantar Permohonan <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        <span style="font-style: italic;">Silahkan diupload surat pengantar permohonan data instansi/lembaga/perusahaan dalam bentuk pdf/doc/txt (Ukuran file max 20 mb)</span>
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Surat Pernyataan ( Wajib Bermaterai )<em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        <span style="font-style: italic;">Surat pernyataan ini hanya diperuntukan bagi pemohon yang jenis datanya dikenakan data nol rupiah / penelitian non komersial seperti mahasiswa/pelajar ( Ukuran file max 20 mb).</span>
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                        <label for="formFile" class="form-label">Proposal Penelitian ( wajib dilengkapi bagi pemohon penelitan non komersial / mahasiswa) *
+                                            <em class="important" style="color: #ff0000 ;">*</em></label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        <span style="font-style: italic;">Silahkan upload file proposal saudara yang telah ditandatangani Pembimbing/Penguji dalam bentuk softcopy sebagai syarat sementara dan mohon dibawa file hardcopynya saat ke kantor kami ( Ukuran file max 20 mb).</span>
+                                    </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group col-md-12">
+                                        <label for="formFile" class="form-label">Foto Kartu Identitas Diri (KTP/KTM/SIM/NPWP)</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        <span style="font-style: italic;">Silahkan diupload foto kartu identitas diri dengan gambar yang jelas ( ukuran max 10 mb)</span>
+                                    </div>
+                                    
+                                    <div class="container col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <label for="" class="form-label">Tanda Tangan <span>(Segala informasi yang saya input dalam formulir ini adalah informasi yang sebenar-benarnya dan jika dikemudian hari terdapat kesalahan atau kekeliruan didalamnya maka akan menjadi tanggung jawab saya)</span> <em class="important" style="color: #ff0000 ;">*</em> </label>
+                                                <!-- canvas tanda tangan  -->
+                                                <canvas id="signature-pad" class="signature-pad"></canvas>
+                                
+                                                <!-- tombol submit  -->
+                                                <div style="float: left;">
+                                                    <span style="font-style: italic;">Silahkan melakukan tandatangan touchscreen pada layar gawai bapak/ibu</span>
+                                                </div>
+                                
+                                                <div style="float: right;">
+                                                    <!-- tombol undo  -->
+                                                    <button type="button" class="btn btn-dark" id="undo">
+                                                        <span class="fas fa-undo"></span>
+                                                        Undo
+                                                    </button>
+                                
+                                                    <!-- tombol hapus tanda tangan  -->
+                                                    <button type="button" class="btn btn-danger" id="clear">
+                                                        <span class="fas fa-eraser"></span>
+                                                        Clear
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>                             
+                    </form>
+                    
+                </div>
+                
+            </div>
+            <!--End Billing Details-->
+            <div class="padd-top-20"><button type="button" class="theme-btn btn-style-one">Submit</button></div>
+        </div>
+    </div>
+    
+    <!--Main Footer-->
+    <footer class="main-footer footer-style-two">
+    	
+        <!--Footer Upper-->        
+        <div class="footer-upper">
+            <div class="auto-container">
+                <div class="row clearfix">
+                	
+                    <div class="col-lg-3 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget brighton-widget">
+                            <div class="text">Stasiun Meteorologi Kelas III<br> Rahadi Oesman Ketapang</div>
+
+                            <h4 style="color: #ffffff;">Alamat</h4>
+                            <div class="text">Jalan Patimura No. 11 Ketapang<br> Kalimantan Barat</div>
+                            
+                            <h4 style="color: #ffffff;">Telp/Fax</h4>
+                            <div class="text">0811 915 6161<br> 0534 32706</div>
+                            
+                            <h4 style="color: #ffffff;">Email</h4>
+                            <div class="text">stamet.ketapang@bmkg.go.id<br> stametketapang@gmail.com</div>
+                            
+                        </div>
+                    </div>
+                            
+                    <div class="col-lg-5 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget quick-links">
+                        	<div class="links-outer">
+                                <div class="col-md-15 col-sm-12 col-xs-12">
+                                    <h4 style="color: #ffffff;">Link Terkait</h4>
+                                    <ul>
+                                        <li><a href="#">Informasi Cuaca</a></li>
+                                        <li><a href="#">Cuaca Maritim</a></li>
+                                        <li><a href="#">Cuaca Penerbangan</a></li>
+                                        <li><a href="#">CEWS (Climate Early Warning System)</a></li>
+                                        <li><a href="#">InaTEWS (Indonesia Tsunami Early Warning System)</a></li>
+                                        <li><a href="#">Data Online BMKG</a></li>
+                                        <li><a href="#">Email BMKG</a></li>
+                                        <li><a href="#">JDIH BMKG</a></li>
+                                        <li><a href="#">Inspektorat BMKG</a></li>
+                                        <li><a href="#">SDM BMKG</a></li>
+                                        <li><a href="#">Pusdiklat BMKG</a></li>
+                                        <li><a href="#">Puslitbang BMKG</a></li>
+                                        <li><a href="#">STMKG</a></li>
+                                    </ul>
+                                </div>
+							</div>
+                        </div>
+                        
+                    </div>
+                    	
+                    
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                    	<div class="footer-widget">
+                            <div class="text-center" style="color: white;">Video Profil Stamet Ketapang</div>
+                            
+                        <br>
+                        	<div class="newsletter-form newsletter-form-two">
+                                <form method="post" action="contact.html">
+                                    <div class="row clearfix">
+                                        <iframe width="480" height="272" src="https://www.youtube.com/embed/34z6k8U62bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </form>
+            				</div>
+                        
+            			</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Footer Bottom-->
+    	<div class="footer-bottom">
+            <div class="auto-container">
+                <!--Copyright-->
+                <div class="text-center">
+                	<div class="copyright">&copy; 2022 Stamet Ketapang. All Rights Reserved.</div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-long-arrow-up"></span></div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script defer="" type="text/javascript" src="https://static.zohocdn.com/forms/js/formstplivejs.5598e1e583c1d09fc270b76b7bc87fed.js"></script>
+<script defer="" type="text/javascript" src="https://static.zohocdn.com/forms/js/formsthirdpartylivejs.fa80d21e90eb2a92193fc45ef5617573.js"></script>
+<script defer="" type="text/javascript" src="https://static.zohocdn.com/forms/js/formscommonlive.9acb6386bf9e91af9b53a399d698e202.js"></script>
+<script defer="" type="text/javascript" src="https://static.zohocdn.com/forms/js/formslive.4d9eb30559b22cb9af0e6ae0be92ee7c.js"></script>
+<script defer="" type="text/javascript" src="https://static.zohocdn.com/forms/js/formsselect.b9384dcadf2bc7b3816527891df599f6.js"></script>
+<script>
+    // script di dalam ini akan dijalankan pertama kali saat dokumen dimuat
+    document.addEventListener('DOMContentLoaded', function () {
+        resizeCanvas();
+    })
+
+    //script ini berfungsi untuk menyesuaikan tanda tangan dengan ukuran canvas
+    function resizeCanvas() {
+        var ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+    }
+
+
+    var canvas = document.getElementById('signature-pad');
+
+    //warna dasar signaturepad
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(255, 255, 255)'
+    });
+
+    //saat tombol clear diklik maka akan menghilangkan seluruh tanda tangan
+    document.getElementById('clear').addEventListener('click', function () {
+        signaturePad.clear();
+    });
+
+    //saat tombol undo diklik maka akan mengembalikan tanda tangan sebelumnya
+    document.getElementById('undo').addEventListener('click', function () {
+        var data = signaturePad.toData();
+        if (data) {
+            data.pop(); // remove the last dot or line
+            signaturePad.fromData(data);
+        }
+    });
+
+    //saat tombol change color diklik maka akan merubah warna pena
+    document.getElementById('change-color').addEventListener('click', function () {
+
+        //jika warna pena biru maka buat menjadi hitam dan sebaliknya
+        if(signaturePad.penColor == "rgba(0, 0, 255, 1)"){
+
+            signaturePad.penColor = "rgba(0, 0, 0, 1)";
+        }else{
+            signaturePad.penColor = "rgba(0, 0, 255, 1)";
+        }
+    })
+
+    //fungsi untuk menyimpan tanda tangan dengan metode ajax
+    $(document).on('click', '#btn-submit', function () {
+        var signature = signaturePad.toDataURL();
+
+        $.ajax({
+            url: "proses.php",
+            data: {
+                foto: signature,
+            },
+            method: "POST",
+            success: function () {
+                location.reload();
+                alert('Tanda Tangan Berhasil Disimpan');
+            }
+
+        })
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+    flatpickr("input[type=date]", {});
+    flatpickr(".date");
+ 
+
+</script>
+</body>
+</html>
