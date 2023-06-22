@@ -17,7 +17,11 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
-
+<style>
+embed {
+  width: 100%;
+}
+</style>
 <body>
 <div class="page-wrapper">
 
@@ -125,7 +129,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="current dropdown"><a href="#">Pengamatan</a>
+                                <li class="dropdown"><a href="#">Pengamatan</a>
                                     <ul>
                                     	<li class="dropdown">
                                             <a href="#">Citra Satelit</a>
@@ -205,7 +209,7 @@
                                         <li><a href="#">Aerodrome Climatolgy Summary</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Berita Artikel</a>
+                                <li class="current dropdown"><a href="#">Berita Artikel</a>
                                     <ul>
                                     	<li><a href="#">Berita</a></li>
                                         <li><a href="#">Artikel</a></li>
@@ -321,7 +325,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="current dropdown"><a href="#">Pengamatan</a>
+                        <li class="dropdown"><a href="#">Pengamatan</a>
                             <ul>
                                 <li class="dropdown">
                                     <a href="#">Citra Satelit</a>
@@ -401,7 +405,7 @@
                                 <li><a href="#">Aerodrome Climatolgy Summary</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#">Berita Artikel</a>
+                        <li class="current dropdown"><a href="#">Berita Artikel</a>
                             <ul>
                                 <li><a href="#">Berita</a></li>
                                 <li><a href="#">Artikel</a></li>
@@ -449,7 +453,7 @@
     
     <section class="page-title" style="background-image:url(images/background/bmkg.png);">
         <div class="auto-container">
-            <h1 style="color: #ffffff;">PENGAMATAN</h1>
+            <h1 style="color: #ffffff;">Layanan Publik</h1>
         </div>
         
         <!--page-info-->
@@ -459,8 +463,8 @@
             
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <ul class="bread-crumb clearfix">
-                            <li><a href="index.html">Beranda</a></li>
-                            <li class="active">Ikhtisar Cuaca</li>
+                            <li><a href="index.html">Layanan Publik</a></li>
+                            <li class="active">Regulasi Pelayanan</li>
                         </ul>
                     </div>
                     
@@ -471,88 +475,72 @@
     </section>
 
     <!--Sidebar blog Page-->
-    <div class="sidebar-page-container">
+    <section class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
 
                 <!--Content Side-->
-                <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
-                    <!--tabs-section-->
-                    <section class="tabs-section" style="padding: 0%;">
-                        <div class="auto-container">
-                            <div class="row clearfix">
-                                <h3 style="padding-left: 40px;">Ikhtisar Cuaca harian</h3><br>
-                                <div class="column content-column col-lg-11 col-md-12 col-sm-12">
-                                    <img src="images/resource/service-detail-1.jpg" alt="">
+                <div class="content-side col-md-8">
+                    <div class="text-center"><h3>Regulasi Pelayanan</h3></div><br>
+                    <!--shop-single-->
+                    <div class="shop-single">
+                        <div class="product-details">
+                            <!--Basic Details-->
+                            <div class="basic-details">
+                                <div class="image-column col-md-10">
+                                    <!--item-tabs-->
+                                    <div class="item-tabs">
+                                        <!--Tabs Content-->
+                                        <div class="tabs-content">
+                                            <!--Tab / Active Tab-->
+                                            <div class="tab active-tab" id="tab-one">
+                                                <embed src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/PotensiHujanIndonesia.pdf" width="800" height="900">
+                                            </div><br><br>
+                                            <div class="tab" id="tab-two">
+                                                <embed src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/PotensiHujanIndonesia.pdf" width="800" height="900">
+                                            </div><br><br>
+                                            <div class="tab" id="tab-three">
+                                                <embed src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/PotensiHujanIndonesia.pdf" width="800" height="900">
+                                            </div><br><br>
+                                            <div class="tab" id="tab-four">
+                                                <embed src="https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/PotensiHujanIndonesia.pdf" width="800" height="900">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!--Basic Details-->
                         </div>
-                    </section>
+                    </div>
+                    
 				</div>
                 <!--Content Side-->
 
 				<!--Sidebar-->
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4">
                     <aside class="sidebar news-sidebar">
                     	<!-- Recent Posts -->
                         <div class="sidebar-widget recent-posts wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                         
-                            <div class="sec-title-seven"><h2>Peringatan Cuaca</h2></div>	
+                            <div class="sec-title-seven"><h2>Berita Lainnya</h2></div>	
                             
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Peringatan Dini Cuaca 3 Hari Ke Depan</a></h4>
+                            <article class="post">
+                                <figure class="post-thumb"><img src="images/resource/EDUKASI CUACA.jpg" alt="" style="width: 80%;"></figure>
+                                <h4><a href="#">Artikel</a></h4>
                             </article>
                             
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Kebakaran Hutan dan Lahan</a></h4>
+                             <article class="post">
+                                <figure class="post-thumb"><img src="images/resource/post-thumb-4.jpg" alt=""></figure>
+                                <h4><a href="#">Professor and Mary here</a></h4>
                             </article>
                             
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Siklon Tropis</a></h4>
+                            <article class="post">
+                                <figure class="post-thumb"><img src="images/resource/post-thumb-5.jpg" alt=""></figure>
+                                <h4><a href="#">Be Muppet Show tonight</a></h4>
                             </article>
-                            
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Prakiraan Cuaca Berbasis Dampak</a></h4>
-                            </article>
-                            
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Gelombang Tinggi</a></h4>
-                                <hr>
-                            </article>
+                        
                         </div>
                         
-                    	<!-- Recent Posts -->
-                        <div class="sidebar-widget recent-posts wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        
-                            <div class="sec-title-seven"><h2>Index Model Prakiraan</h2></div>	
-                            
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Potensi Pertumbuhan Awan</a></h4>
-                            </article>
-                            
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Prakiraan Angin</a></h4>
-                            </article>
-                            
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">Potensi Hujan Harian</a></h4>
-                            </article>
-                            
-                            <article class="post" style="padding: 0%; min-height: 33px;">
-                                <!--post-meta-->
-                                <h4><a href="#">MJO</a></h4>
-                            </article>
-
-                        </div>
-
 						</aside>
 
 
@@ -562,72 +550,74 @@
 
             </div>
         </div>
-    </div>
+    </section>
     
     <!--Main Footer-->
     <footer class="main-footer footer-style-two">
     	
         <!--Footer Upper-->        
         <div class="footer-upper">
-        <div class="auto-container">
-            <div class="row clearfix">
-                
-                <div class="col-lg-3 col-sm-6 col-xs-12 column">
-                    <div class="footer-widget brighton-widget">
-                        <div class="text">Stasiun Meteorologi Kelas III<br> Rahadi Oesman Ketapang</div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                	
+                    <div class="col-lg-3 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget brighton-widget">
+                            <div class="text">Stasiun Meteorologi Kelas III<br> Rahadi Oesman Ketapang</div>
 
-                        <h4 style="color: #ffffff;">Alamat</h4>
-                        <div class="text">Jalan Patimura No. 11 Ketapang<br> Kalimantan Barat</div>
-                        
-                        <h4 style="color: #ffffff;">Telp/Fax</h4>
-                        <div class="text">0811 915 6161<br> 0534 32706</div>
-                        
-                        <h4 style="color: #ffffff;">Email</h4>
-                        <div class="text">stamet.ketapang@bmkg.go.id<br> stametketapang@gmail.com</div>
-                        
-                    </div>
-                </div>
-                        
-                <div class="col-lg-5 col-sm-6 col-xs-12 column">
-                    <div class="footer-widget quick-links">
-                        <div class="links-outer">
-                            <div class="col-md-15 col-sm-12 col-xs-12">
-                                <h4 style="color: #ffffff;">Link Terkait</h4>
-                                <ul>
-                                    <li><a href="#">Informasi Cuaca</a></li>
-                                    <li><a href="#">Cuaca Maritim</a></li>
-                                    <li><a href="#">Cuaca Penerbangan</a></li>
-                                    <li><a href="#">CEWS (Climate Early Warning System)</a></li>
-                                    <li><a href="#">InaTEWS (Indonesia Tsunami Early Warning System)</a></li>
-                                    <li><a href="#">Data Online BMKG</a></li>
-                                    <li><a href="#">Email BMKG</a></li>
-                                    <li><a href="#">JDIH BMKG</a></li>
-                                    <li><a href="#">Inspektorat BMKG</a></li>
-                                    <li><a href="#">SDM BMKG</a></li>
-                                    <li><a href="#">Pusdiklat BMKG</a></li>
-                                    <li><a href="#">Puslitbang BMKG</a></li>
-                                    <li><a href="#">STMKG</a></li>
-                                </ul>
-                            </div>
+                            <h4 style="color: #ffffff;">Alamat</h4>
+                            <div class="text">Jalan Patimura No. 11 Ketapang<br> Kalimantan Barat</div>
+                            
+                            <h4 style="color: #ffffff;">Telp/Fax</h4>
+                            <div class="text">0811 915 6161<br> 0534 32706</div>
+                            
+                            <h4 style="color: #ffffff;">Email</h4>
+                            <div class="text">stamet.ketapang@bmkg.go.id<br> stametketapang@gmail.com</div>
+                            
                         </div>
                     </div>
+                            
+                    <div class="col-lg-5 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget quick-links">
+                        	<div class="links-outer">
+                                <div class="col-md-15 col-sm-12 col-xs-12">
+                                    <h4 style="color: #ffffff;">Link Terkait</h4>
+                                    <ul>
+                                        <li><a href="#">Informasi Cuaca</a></li>
+                                        <li><a href="#">Cuaca Maritim</a></li>
+                                        <li><a href="#">Cuaca Penerbangan</a></li>
+                                        <li><a href="#">CEWS (Climate Early Warning System)</a></li>
+                                        <li><a href="#">InaTEWS (Indonesia Tsunami Early Warning System)</a></li>
+                                        <li><a href="#">Data Online BMKG</a></li>
+                                        <li><a href="#">Email BMKG</a></li>
+                                        <li><a href="#">JDIH BMKG</a></li>
+                                        <li><a href="#">Inspektorat BMKG</a></li>
+                                        <li><a href="#">SDM BMKG</a></li>
+                                        <li><a href="#">Pusdiklat BMKG</a></li>
+                                        <li><a href="#">Puslitbang BMKG</a></li>
+                                        <li><a href="#">STMKG</a></li>
+                                    </ul>
+                                </div>
+							</div>
+                        </div>
+                        
+                    </div>
+                    	
                     
-                </div>
-                    
-                
                     <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="footer-widget">
+                    	<div class="footer-widget">
                             <div class="text-center" style="color: white;">Video Profil Stamet Ketapang</div>
                             
                         <br>
-                        <div class="newsletter-form newsletter-form-two">
-                            <form method="post" action="contact.html">
-                                <div class="row clearfix">
-                                    <iframe width="480" height="272" src="https://www.youtube.com/embed/34z6k8U62bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        	<div class="newsletter-form newsletter-form-two">
+                                <form method="post" action="contact.html">
+                                    <div class="row clearfix">
+                                        <iframe width="480" height="272" src="https://www.youtube.com/embed/34z6k8U62bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
+                                </form>
+            				</div>
+                        
+            			</div>
                     </div>
                 </div>
             </div>
@@ -638,7 +628,7 @@
             <div class="auto-container">
                 <!--Copyright-->
                 <div class="text-center">
-                	<div class="copyright" style="color: #ffffff;">&copy; 2022 Stamet Ketapang. All Rights Reserved.</div>
+                	<div class="copyright">&copy; 2022 Stamet Ketapang. All Rights Reserved.</div>
                 </div>
                 
             </div>
@@ -651,6 +641,36 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-long-arrow-up"></span></div>
+
+<!--Search Popup-->
+<div id="search-popup" class="search-popup">
+	<div class="close-search theme-btn"><span class="flaticon-unchecked"></span></div>
+	<div class="popup-inner">
+    
+    	<div class="search-form">
+        	<form method="post" action="index.html">
+            	<div class="form-group">
+                	<fieldset>
+                        <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
+                        <input type="submit" value="Search" class="theme-btn">
+                    </fieldset>
+                </div>
+            </form>
+            
+            <br>
+            <h3>Recent Search Keywords</h3>
+            <ul class="recent-searches">
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Logistics</a></li>
+                <li><a href="#">Freedom</a></li>
+            </ul>
+        
+        </div>
+        
+    </div>
+</div>
 
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>
